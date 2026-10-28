@@ -13,7 +13,7 @@ class Solution {
         ListNode dummy = new ListNode(0);
         ListNode tail = dummy;
         while(list1 != null && list2 != null){
-            if(list1.val < list2.val){
+            if(list1. val <= list2.val){
                 tail.next = list1;
                 tail = list1;
                 list1 = list1.next;
