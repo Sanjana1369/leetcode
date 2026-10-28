@@ -14,22 +14,22 @@ class Solution {
    ListNode tail = dummy;
    int carry = 0;
    while(l1 != null || l2 != null || carry != 0){
-    int val1 = 0;
-    int val2 = 0;
+    int v1 = 0;
+    int v2 = 0;
     if(l1 != null){
-        val1 = l1.val;
+        v1 = l1.val;
         l1 = l1.next;
     }
     if(l2 != null){
-        val2 = l2.val;
+        v2 = l2.val;
         l2 = l2.next;
     }
-    int sum = val1 + val2 + carry;
+    int sum = v1 + v2 + carry;
     int digit = sum % 10;
-    carry = sum/10;
+    carry = sum / 10;
     tail.next = new ListNode(digit);
     tail = tail.next;
    }
-return dummy.next;
+   return dummy.next;
 }
 }
